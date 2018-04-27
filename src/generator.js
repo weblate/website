@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import { IntlProvider, Text } from 'preact-i18n';
 import t from 'i18n';
 import localforage from 'localforage';
+import Joyride from 'react-joyride';
 
 class Generator extends preact.Component {
     constructor(props) {
@@ -118,8 +119,17 @@ class Generator extends preact.Component {
             }
         }
 
+        let tutorial_steps = [
+            {
+                title: 'Select a company',
+                text: 'First, you will need to select the company you want to send a request to. You can use this search to see if the company you are looking for is already in our database, otherwise you can enter one manually below.',
+                selector: '#aa-search-input'
+            }
+        ];
+
         return (
             <main>
+                <Joyride ref={c => (this.joyride = c)} steps={tutorial_steps} run={true} />
                 <h2 id="generator-heading"><Text id="generate-request"/>: {this.state.request_data['reference']} </h2>
                 <div id="generator-controls">
                     <button id="new-request-button" onClick={this.newRequest}><Text id='new-request'/></button>
