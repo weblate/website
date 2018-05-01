@@ -6,6 +6,7 @@ import { IntlProvider, Text } from 'preact-i18n';
 import t from 'i18n';
 import localforage from 'localforage';
 import Joyride from 'react-joyride';
+import { tutorial_steps, tutorial_steps_no_overlay } from './generator-tutorial';
 
 class Generator extends preact.Component {
     constructor(props) {
@@ -50,7 +51,11 @@ class Generator extends preact.Component {
             suggestion: null,
             download_active: false,
             blob_url: '',
-            download_filename: ''
+            download_filename: '',
+            tutorial: {
+                steps: tutorial_steps,
+                current_step: {}
+            }
         };
 
         this.template_url = BASE_URL + 'templates/' + LOCALE + '/';
@@ -68,6 +73,7 @@ class Generator extends preact.Component {
         this.handleLetterChange = this.handleLetterChange.bind(this);
         this.storeRequest = this.storeRequest.bind(this);
         this.newRequest = this.newRequest.bind(this);
+        this.tutorial_callback = this.tutorial_callback.bind(this);
 
         this.pdfWorker = new Worker(BASE_URL + 'js/pdfworker.gen.js'); // TODO: Maybe solve this via inline script and blob?
         this.pdfWorker.onmessage = (message) => {
@@ -119,17 +125,21 @@ class Generator extends preact.Component {
             }
         }
 
-        let tutorial_steps = [
-            {
-                title: 'Select a company',
-                text: 'First, you will need to select the company you want to send a request to. You can use this search to see if the company you are looking for is already in our database, otherwise you can enter one manually below.',
-                selector: '#aa-search-input'
-            }
-        ];
-
         return (
             <main>
-                <Joyride ref={c => (this.joyride = c)} steps={tutorial_steps} run={true} />
+                <Joyride
+                    ref={c => (this.tutorial = c)}
+                    callback={this.tutorial_callback}
+                    steps={this.state.tutorial['steps']}
+                    type="continuous"
+                    run={true}
+                    autoStart={true}
+                    locale={{ back: 'Back', close: 'Close', last: 'Finish', next: 'Next', skip: 'Skip tutorial' }}
+                    showSkipButton={true}
+                    showStepsProgress={true}
+                    disableOverlay={true}
+                    showOverlay={!tutorial_steps_no_overlay.includes(this.state['tutorial']['current_step']['selector'])}
+                />
                 <h2 id="generator-heading"><Text id="generate-request"/>: {this.state.request_data['reference']} </h2>
                 <div id="generator-controls">
                     <button id="new-request-button" onClick={this.newRequest}><Text id='new-request'/></button>
@@ -138,10 +148,10 @@ class Generator extends preact.Component {
                            index='companies' onAutocompleteSelected={this.handleAutocompleteSelected}
                            placeholder={t('select-company', 'generator')} debug={false}/>
                 <div id="request-generator" className="grid" style="margin-top: 10px;">
-                    <div className="col50">
+                    <div id="generator-left-col" className="col50">
                         <RequestForm onChange={this.handleInputChange} onTypeChange={this.handleTypeChange} onLetterChange={this.handleLetterChange} request_data={this.state.request_data}/>
                     </div>
-                    <div className="col50">
+                    <div id="generator-right-col" className="col50">
                         {company_info}
                         <div id="pdf-controls">
                             <a id="download-button" className={"button" + (this.state.download_active ? '' : ' disabled')} href={this.state.blob_url} download={this.state.download_filename}
@@ -267,6 +277,13 @@ class Generator extends preact.Component {
             recipient: this.state.request_data.recipient_address,
             via: 'fax' // TODO: This is not currently implemented
         }).catch(() => { console.log('Failed to save request with reference ' + this.state.request_data['reference']); /* TODO: Proper error handling. */ });
+    }
+
+    tutorial_callback(data) {
+        this.setState(prev => {
+            prev['tutorial']['current_step'] = data.step;
+            return prev;
+        });
     }
 }
 

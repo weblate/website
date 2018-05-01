@@ -8,13 +8,13 @@
     <title>{{ if .Title }}{{ .Title }}{{ else }}{{ T "header-name" }}{{ end }}</title>
     {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
     {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    <link rel="stylesheet" href="{{ "main.css" | absURL }}"/>
     {{ if eq .Type "generator" }}
-    <!-- TODO: This can be optimized a *lot* with the changes on b_build-optimization -->
+    <!-- TODO: This can be optimized a *lot* with the changes on b_build-optimization. They also offer an SCSS template that we could use if we wanted to switch to SCSS. -->
     <style>
         {{ readFile "/node_modules/react-joyride/lib/react-joyride-compiled.css" | safeCSS }}
     </style>
     {{ end }}
+    <link rel="stylesheet" href="{{ "main.css" | absURL }}"/>
     {{ .Hugo.Generator }}
     {{ if .IsHome }}
     <!-- TODO: Get rid of Google dependency! -->

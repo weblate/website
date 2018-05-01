@@ -338,3 +338,17 @@ textarea.form-element {
     font-weight: bold;
     padding-right: 10px;
 }
+
+/* Tutorial */
+.joyride p:first-child {
+    margin-top: 0;
+    margin-block-start: 0;
+}
+.joyride p:last-child {
+    margin-bottom: 0;
+    margin-block-end: 0;
+}
+.joyride-tooltip__button--primary { background-color: #1982c4; }
+.joyride-tooltip__button--primary:hover { background-color: #0062b1; }
+.joyride-tooltip__button--secondary { color: #1982c4; }
+.joyride-tooltip__header { border-bottom: 1px solid #1982c4; }
