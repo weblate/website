@@ -103,5 +103,26 @@
         "telecommunication": "Telekommunikation",
         "travel": "Reise",
         "utility": "Versorgung"
+    },
+    "tutorial": {
+        "back": "Zurück",
+        "close": "Schließen",
+        "finish": "Fertig",
+        "next": "Weiter",
+        "skip": "Tutorial überspringen",
+        "welcome": "Willkommen!",
+        "welcome-text": "<p>Moin und willkommen bei Datenanfragen.de. Es ist toll, dass Du Dein Recht auf Privatsphäre ausüben willst. Dabei wollen wir Dir soviel helfen, wie wir können..</p><p>Wir haben eine kleine Tour vorbereitet, die Dir beim Loslegen helfen soll. Wenn Du kein Tutorial brauchst, kannst Du es im nächsten Schritt überspringen, aber erst haben wir ein paar Fragen an Dich.</p><p>Datenanfragen.de ist von Grund auf konzipiert, Deine Privatsphäre zu respektieren. Alles passiert nur auf Deinem eigenen Rechner und wir sehen Deine Daten nie. Aber wenn Du willst, kannst Du die folgenden Funktionen aktivieren, von denen wir glauben, dass sie Dir das Leben einfacher machen werden.</p><p>TODO: Privacy controls (see #23)</p>",
+        "select-recipient": "Einen Empfänger auswählen",
+        "select-recipient-text": "<p>Alles klar, auf geht's.</p><p>Zunächst musst Du angeben, an wen Deine Anfrage gehen soll. In unserer Datenbank haben wir schon die Kontaktdaten vieler Unternehmen gespeichert. Du kannst entweder die Suchleiste verwenden, um solche Daten aus unserer Datenbank vorauszufüllen oder sie unten natürlich auch von Hand eintragen.</p>",
+        "choose-type": "Den Anfragetyp festlegen",
+        "choose-type-text": "<p>Als Nächstes müssen wir wissen, was für eine Anfrage Du senden möchtest.</p><p>Wenn Du wissen willst, welche Informationen ein Unternehmen zu Dir gespeichert hat, wähle eine <em>Selbstauskunft</em>. Mit einem <em>Löschantrag</em> forderst Du ein Unternehmen auf, die personenbezogenen Daten, die es zu Dir gespeichert hat, zu löschen. Einen <em>Berichtigungsantrag</em> schließlich solltest Du wählen, wenn ein Unternehmen falsche Daten über Dich gespeichert hat und Du diese korrigieren lassen möchtest.</p>",
+        "enter-id-data": "Deine Daten zur Identifizierung angeben",
+        "enter-id-data-text": "<p>Das Unternehmen wird natürlich sicherstellen müssen, dass Du auch tatsächlich Du bist. Dafür musst Du einige Daten angeben. Gib ruhig erst einmal weniger als mehr an – im Zweifelsfall wird das Unternehmen schon nachfragen.</p><p>Wir haben einige Erfahrung mit den Daten, die Unternehmen für solche Anfragen haben wollen. Die Standardfelder, die Du siehst, sind in der Regel ein guter Anfang. Wenn wir wissen, dass bestimmte Felder auf jeden Fall ausgefüllt werden müssen, haben wir diese mit einem * markiert.</p><p>Falls Du noch weitere Felder hinzufügen möchtest, wähle einfach den passenden Feldtyp aus und klicke unten auf den Knopf.</p>",
+        "sign": "Deine Anfrage unterschreiben",
+        "sign-text": "<p>Ein echter Brief braucht auch eine Unterschrift! Keine Sorge: Auch daran haben wir natürlich gedacht. Zeiche einfach mit gedrückter Maustaste in das weiße Feld.</p>",
+        "youre-done": "Und fertig",
+        "youre-done-text": "<p>Das war's schon. Rechts siehst Du eine Vorschau Deiner Anfrage.</p><p>Mit dem Knopf über dem Brief kannst Du ihn herunterladen, um ihn an das Unternehmen abschicken.</p>",
+        "next-request": "Auf zur nächsten Anfrage!",
+        "next-request-text": "<p>Und damit ist unsere Tour auch schon wieder durch. Danke, dass Du durchgehalten hast. Wir hoffen, dass wir alles gut erklärt haben.</p><p>Jetzt, wo Du Deine erste DSGVO-Anfrage erstellst hast, solltest Du gleich zur nächsten schreiten, oder?</p><p>Denk' immer dran: Du hast ein Recht aus Privatsphäre. Nutze es.</p>"
     }
 }

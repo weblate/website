@@ -134,7 +134,7 @@ class Generator extends preact.Component {
                     type="continuous"
                     run={true}
                     autoStart={true}
-                    locale={{ back: 'Back', close: 'Close', last: 'Finish', next: 'Next', skip: 'Skip tutorial' }}
+                    locale={{ back: t('back', 'tutorial'), close: t('close', 'tutorial'), last: t('finish', 'tutorial'), next: t('next', 'tutorial'), skip: t('skip', 'tutorial') }}
                     showSkipButton={true}
                     showStepsProgress={true}
                     disableOverlay={true}
