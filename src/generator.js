@@ -173,7 +173,6 @@ class Generator extends preact.Component {
                 if(Privacy.isAllowed(PRIVACY_ACTIONS.SAVE_ID_DATA) && IdData.shouldAlwaysFill()) {
                     this.idData.getAllFixed().then((fill_data) => {
                         this.setState((prev) => {
-                            console.log('this.resetInitialConditions', prev.request_data['id_data']);
                             prev.request_data['id_data'] = IdData.mergeFields(prev.request_data['id_data'], fill_data, true, true);
                             return prev;
                         });

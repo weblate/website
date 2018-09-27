@@ -150,8 +150,6 @@ export default class IdData {
                 merged_fields.push(field);
             }
         });
-        console.log('IdData.mergeFields has_primary_address', has_primary_address);
-        console.log('IdData.mergeFields new_fields', new_fields);
         return merged_fields.concat(new_fields.map(field => {
             if(!!field['value'] && field['type'] === 'address') field['value']['primary'] = ++has_primary_address === 1;
             field['value'] = field['value'] || (field['type'] === 'address' ? {"primary": ++has_primary_address === 1} : '');
