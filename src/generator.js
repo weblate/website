@@ -18,22 +18,6 @@ const request_articles = {'access': 15, 'erasure': 17, 'rectification': 16};
 class Generator extends preact.Component {
     constructor(props) {
         super(props);
-        this.default_fields = [{
-            "desc": t('name', 'generator'),
-            "type": "name",
-            "optional": true,
-            "value": ""
-        }, {
-            "desc": t('birthdate', 'generator'),
-            "type": "birthdate",
-            "optional": true,
-            "value": ""
-        }, {
-            "desc": t('address', 'generator'),
-            "type": "address",
-            "optional": true,
-            "value": {"primary": true}
-        }];
 
         this.state = {
             request_data: this.freshRequestData(),
@@ -105,7 +89,7 @@ class Generator extends preact.Component {
         return {
             type: 'access',
             transport_medium: 'fax',
-            id_data: deepCopyObject(this.default_fields),
+            id_data: deepCopyObject(defaultFields(LOCALE)),
             reference: Letter.generateReference(today),
             date: today.toISOString().substring(0, 10),
             recipient_address: '',
@@ -173,7 +157,7 @@ class Generator extends preact.Component {
                 if(Privacy.isAllowed(PRIVACY_ACTIONS.SAVE_ID_DATA) && IdData.shouldAlwaysFill()) {
                     this.idData.getAllFixed().then((fill_data) => {
                         this.setState((prev) => {
-                            prev.request_data['id_data'] = IdData.mergeFields(prev.request_data['id_data'], fill_data, true, true);
+                            prev.request_data['id_data'] = IdData.mergeFields(prev.request_data['id_data'], fill_data, true, true, true);
                             return prev;
                         });
                         this.renderRequest();
@@ -327,7 +311,7 @@ class Generator extends preact.Component {
         this.setState(prev => {
             prev.request_data['transport_medium'] = company['suggested-transport-medium'] ? company['suggested-transport-medium'] : company['fax'] ? 'fax' : 'letter';
             prev.request_data['recipient_address'] = company.name + '\n' + company.address + (prev.request_data['transport_medium'] === 'fax' ?'\n' + t('by-fax', 'generator') + company['fax'] : '');
-            prev.request_data['id_data'] = IdData.mergeFields(prev.request_data['id_data'], !!company['required-elements'] && company['required-elements'].length > 0 ? company['required-elements'] : this.default_fields);
+            prev.request_data['id_data'] = IdData.mergeFields(prev.request_data['id_data'], !!company['required-elements'] && company['required-elements'].length > 0 ? company['required-elements'] : defaultFields(company['request-language']));
             prev.request_data['recipient_runs'] = company.runs || [];
             prev.suggestion = company;
             prev.request_data['data_portability'] = company['suggested-transport-medium'] === 'email';
@@ -525,6 +509,25 @@ function findGetParamter(param){
 function templateURL(locale = LOCALE) {
     if(!Object.keys(I18N_DEFINITION_REQUESTS).includes(locale)) locale = LOCALE;
     return BASE_URL + 'templates/' + (locale || LOCALE) + '/';
+}
+
+function defaultFields(locale = LOCALE) {
+    return [{
+        "desc": t_r('name', locale),
+        "type": "name",
+        "optional": true,
+        "value": ""
+    }, {
+        "desc": t_r('birthdate', locale),
+        "type": "birthdate",
+        "optional": true,
+        "value": ""
+    }, {
+        "desc": t_r('address', locale),
+        "type": "address",
+        "optional": true,
+        "value": {"primary": true}
+    }];
 }
 
 preact.render((<IntlProvider scope="generator" definition={I18N_DEFINITION}><Generator/></IntlProvider>), null, document.getElementById('generator'));

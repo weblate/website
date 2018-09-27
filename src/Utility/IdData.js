@@ -127,7 +127,7 @@ export default class IdData {
         });
     }
 
-    static mergeFields(fields_to_add_to, fields_to_merge, keep = false, override_values = false) {
+    static mergeFields(fields_to_add_to, fields_to_merge, keep = false, override_values = false, protect_desc = false) {
         let new_fields = fields_to_merge.slice();
         let old_fields = fields_to_add_to.slice();
         let merged_fields = [];
@@ -140,6 +140,7 @@ export default class IdData {
                     || (field['type'] === 'address' && !!new_field['value'] && !!field['value'] && new_field['value']['primary'] && field['value']['primary'])); // both fields are primary addresses
             });
             if(typeof j !== 'undefined' && j >= 0) {
+                if(!protect_desc) field['desc'] = new_fields[j]['desc']; // should only matter for fixed types
                 field['optional'] = 'optional' in new_fields[j] ? new_fields[j]['optional'] : false;
                 if(field['type'] === 'address') field['value']['primary'] = ++has_primary_address === 1;
                 if(override_values) field['value'] = new_fields[j]['value'];
