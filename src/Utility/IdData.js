@@ -134,7 +134,10 @@ export default class IdData {
         let has_primary_address = 0;
         old_fields.forEach((field, i) => { // TODO: How to keep user added inputs and remove machine added inputs? Or do we even need to?
             let j = new_fields.findIndex(new_field => {
-                return new_field['type'] === field['type'] && new_field['desc'] === field['desc']; // Is it a good idea to also check for desc?
+                return new_field['type'] === field['type'] // Merge if type are equal and
+                    && (new_field['desc'] === field['desc']  // descriptions are equal or
+                    || ['name', 'birthdate'].includes(field['type']) // field is of fixed type or
+                    || (field['type'] === 'address' && !!new_field['value'] && !!field['value'] && new_field['value']['primary'] && field['value']['primary'])); // both fields are primary addresses
             });
             if(typeof j !== 'undefined' && j >= 0) {
                 field['optional'] = 'optional' in new_fields[j] ? new_fields[j]['optional'] : false;
@@ -143,10 +146,14 @@ export default class IdData {
                 merged_fields.push(field);
                 new_fields.splice(j, 1);
             } else if(keep) {
+                if(field['type'] === 'address') field['value']['primary'] = ++has_primary_address === 1;
                 merged_fields.push(field);
             }
         });
+        console.log('IdData.mergeFields has_primary_address', has_primary_address);
+        console.log('IdData.mergeFields new_fields', new_fields);
         return merged_fields.concat(new_fields.map(field => {
+            if(!!field['value'] && field['type'] === 'address') field['value']['primary'] = ++has_primary_address === 1;
             field['value'] = field['value'] || (field['type'] === 'address' ? {"primary": ++has_primary_address === 1} : '');
             return field;
         }));

@@ -173,6 +173,7 @@ class Generator extends preact.Component {
                 if(Privacy.isAllowed(PRIVACY_ACTIONS.SAVE_ID_DATA) && IdData.shouldAlwaysFill()) {
                     this.idData.getAllFixed().then((fill_data) => {
                         this.setState((prev) => {
+                            console.log('this.resetInitialConditions', prev.request_data['id_data']);
                             prev.request_data['id_data'] = IdData.mergeFields(prev.request_data['id_data'], fill_data, true, true);
                             return prev;
                         });
@@ -323,8 +324,6 @@ class Generator extends preact.Component {
         let template_file = company['custom-' + this.state.request_data.type + '-template'] || this.state.request_data.type + '-default.txt';
         fetch(templateURL(company['request-language']) + template_file)
             .then(res => res.text()).then(text => {this.setState({template_text: text}); this.renderRequest();});
-
-        console.log('this.setCompany', templateURL(company['request-language']) + template_file);
 
         this.setState(prev => {
             prev.request_data['transport_medium'] = company['suggested-transport-medium'] ? company['suggested-transport-medium'] : company['fax'] ? 'fax' : 'letter';
@@ -525,8 +524,7 @@ function findGetParamter(param){
 }
 
 function templateURL(locale = LOCALE) {
-    const supported_languages = ['de', 'en']; // TODO: Please tell me there is a better way to check this
-    if(!supported_languages.includes(locale)) locale = LOCALE;
+    if(!Object.keys(I18N_DEFINITION_REQUESTS).includes(locale)) locale = LOCALE;
     return BASE_URL + 'templates/' + (locale || LOCALE) + '/';
 }
 
