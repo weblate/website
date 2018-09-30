@@ -16,13 +16,18 @@ input:placeholder-shown + label.fancy-label, textarea:placeholder-shown + label.
     transform: translateY(-1rem);
 }
 
-/* Generator Header */
+/* Generator header */
 
 #generator-header {
     margin-bottom: 15px;
 
     #generator-controls {
         float: right;
+
+        @include mobile {
+            float: none;
+            margin-top: 10px;
+        }
 
         button, .button {
             margin-left: 10px;
@@ -94,7 +99,22 @@ input:placeholder-shown + label.fancy-label, textarea:placeholder-shown + label.
     }
 }
 
-/* PDF Viewer */
+.request-form {
+    .col50 {
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
+#signature {
+    // TODO: This doesn't exactly work on mobile, anyway. If we don't want to optimize for that, it might be better to just hide it.
+    @include mobile {
+        width: 100% !important;
+    }
+}
+
+/* PDF viewer (not exactly accurate anymore, is it? :D) */
 
 .company-info {
     margin-bottom: 20px;
@@ -143,18 +163,14 @@ input:placeholder-shown + label.fancy-label, textarea:placeholder-shown + label.
     position: relative;
 }
 
-#pdf-viewer {
-    border: 0;
-    width: 100%;
-    height: 800px;
-    margin-top: 50px;
-}
-#pdf-viewer.empty {
-    display: none;
-}
-
 
 /* Miscellaneous */
+
+.dynamic-input-primaryButton {
+    @include mobile {
+        hyphens: auto;
+    }
+}
 
 .dynamic-input-primaryButton[data-isprimary="true"] {
     background: $primary-color;
