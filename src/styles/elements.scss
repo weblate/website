@@ -321,6 +321,10 @@ input[type="checkbox"].form-element {
     bottom: 100%;
     margin-bottom: -2px;
     padding: 10px;
+
+    @include mobile {
+        width: 100%;
+    }
 }
 .i18n-widget {
     .select-container {
