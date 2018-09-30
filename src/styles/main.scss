@@ -309,6 +309,10 @@ a #logo {
     background-color: #fff;
     padding: 20px 60px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    @include mobile {
+        padding: 10px 20px;
+    }
 }
 .blog-letter-fill-in:before, .blog-letter-fill-in:after {
     font-weight: bold;
@@ -326,9 +330,18 @@ a #logo {
     flex-direction: row;
     position: relative;
 
+    @include mobile {
+        display: block;
+        padding: 0;
+    }
+
     .article-featured-image {
         max-height: 300px;
         overflow: hidden;
+
+        @include mobile {
+            width: 100%;
+        }
 
         a {
             display: inline;
@@ -338,10 +351,20 @@ a #logo {
             height: 100%;
             width: auto;
             object-fit: cover;
+
+            @include mobile {
+                height: auto;
+            }
         }
     }
 
     .padded {
+        @include mobile {
+            width: auto;
+            padding: 15px;
+            margin-bottom: 25px;
+        }
+
         &.col75 {
             padding-left: 15px;
         }
