@@ -284,6 +284,10 @@ input[type="checkbox"].form-element {
     width: 100%;
     padding-left: 0;
 
+    @include mobile {
+        flex-wrap: wrap;
+    }
+
     li {
         display: block;
         text-align: center;

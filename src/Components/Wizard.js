@@ -102,7 +102,7 @@ export default class Wizard extends preact.Component {
         return (
             <div>
                 <div id="wizard-tabs">
-                        {tabs}
+                    {tabs}
                 </div>
                 <div id="wizard" className="box">
                     <div id="wizard-selector" className="col50">

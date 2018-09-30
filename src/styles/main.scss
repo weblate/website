@@ -98,6 +98,11 @@ a #logo {
     text-align: center;
     font-size: 2.4em;
     color: $primary-color;
+
+    @include mobile {
+        font-size: 2em;
+        hyphens: auto;
+    }
 }
 
 /* Home */
@@ -371,6 +376,10 @@ $sticky-controls-height: 200px;
     background-color: $bg-color;
     height: $sticky-controls-height;
     z-index: 100;
+
+    @include mobile {
+        height: auto; // TODO: @zner0L No way, I am repairing that…
+    }
 
     &.sticky {
         position: fixed;
