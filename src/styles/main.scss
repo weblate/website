@@ -447,6 +447,17 @@ table#my-requests-table {
     }
 }
 
+#privacy-controls-buttons {
+    & > button, & > .button {
+        float: right;
+        margin-right: 10px;
+
+        @include mobile {
+            margin: 10px 0 0 0;
+        }
+    }
+}
+
 /* Company list */
 
 $sticky-controls-height: 200px;
