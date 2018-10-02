@@ -20,7 +20,7 @@ a #logo {
     height: 32px;
 
     @include mobile {
-        width: 70%;
+        max-width: 55vw;
         margin-top: -3px;
         float: left;
     }
