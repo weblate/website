@@ -19,7 +19,7 @@ To build the project, first install Hugo and [Yarn](https://yarnpkg.com). Then c
 For development, use `yarn dev` to start the webpack file watcher which will automatically build the JS and (S)CSS files. For Hugo, use `hugo server --baseURL "http://localhost" --disableFastRender --config config.toml,config-dev.toml,config-menus.toml`.  
 The production builds are automatically done by [Netlify](https://www.netlify.com/) using the `deploy.sh` script.
 
-For testing, we use the Gitlab CI in combination with BrowserStack who kindly let us use their services.
+For testing, we use Gitlab CI in combination with BrowserStack who kindly let us use their services.
 
 ## Contributing
 
