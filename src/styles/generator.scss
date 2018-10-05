@@ -117,9 +117,10 @@ input:placeholder-shown + label.fancy-label, textarea:placeholder-shown + label.
     }
 }
 
-#signature {
+.signature-input {
     // TODO: This doesn't exactly work on mobile, anyway. If we don't want to optimize for that, it might be better to just hide it.
     @include mobile {
+        display: none;
         width: 100% !important;
     }
 }
