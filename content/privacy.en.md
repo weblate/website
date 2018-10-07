@@ -5,7 +5,7 @@
     "aliases": [ "privacy-policy", "data-protection" ]
 }
 
-Our privacy policy was last changed on October 6, 2018.
+Our privacy policy was last changed on October 8, 2018.
 
 ## General remarks
 
