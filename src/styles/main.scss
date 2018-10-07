@@ -454,11 +454,8 @@ table#my-requests-table {
 #privacy-controls-buttons {
     & > button, & > .button {
         float: right;
-        margin-right: 10px;
-
-        @include mobile {
-            margin-top: 10px;
-        }
+        margin-left: 10px;
+        margin-top: 10px;
     }
 }
 
