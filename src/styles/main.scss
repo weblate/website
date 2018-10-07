@@ -30,6 +30,10 @@ a #logo {
 }
 
 #menu-items {
+    #{$button} {
+        display: inline;
+    }
+
     .dropdown-container {
         display: inline-block;
 
@@ -453,7 +457,7 @@ table#my-requests-table {
         margin-right: 10px;
 
         @include mobile {
-            margin: 10px 0 0 0;
+            margin-top: 10px;
         }
     }
 }
