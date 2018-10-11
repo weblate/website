@@ -3,10 +3,17 @@ const child_process = require('child_process');
 const MAC_VERSIONS = ['Yosemite', 'El Capitan', 'Sierra', 'High Sierra'];
 const WIN_VERSIONS = ['7', '8', '8.1', '10'];
 
-let branch = child_process
-  .execSync('git symbolic-ref --short HEAD')
-  .toString()
-  .trim();
+let branch;
+try {
+  branch =
+    process.env.CI_COMMIT_REF_SLUG ||
+    child_process
+      .execSync('git symbolic-ref --short HEAD')
+      .toString()
+      .trim();
+} catch (e) {
+  branch = 'unknown_branch';
+}
 
 const BROWSERS = {
   win_chrome: {
