@@ -667,3 +667,18 @@ button.joyride-tooltip__button--skip {
         color: $gray-darker-color !important;
     }
 }
+
+// tmp before we get chitin
+article.page {
+    width: 80%;
+    margin: auto;
+    @include mobile {
+        width: inherit;
+        margin: unset;
+    }
+}
+
+.sample-letter-list-article .article-featured-image img {
+    object-fit: contain;
+    width: 80%;
+}
