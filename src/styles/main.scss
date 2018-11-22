@@ -429,6 +429,7 @@ table#my-requests-table {
             height: 100%;
             width: auto;
             object-fit: cover;
+            margin-top: 6px;
 
             @include mobile {
                 height: auto;
@@ -447,7 +448,7 @@ table#my-requests-table {
             padding-left: 15px;
         }
 
-        h1 {
+        a h1 {
             color: $primary-color;
 
             &:hover {
@@ -678,7 +679,8 @@ article.page {
     }
 }
 
-.sample-letter-list-article .article-featured-image img {
+.icon-list-article .article-featured-image img {
     object-fit: contain;
     width: 80%;
+    height: auto;
 }

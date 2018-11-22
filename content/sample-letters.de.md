@@ -12,7 +12,7 @@ So wird das Stellen von Anfragen einfach: Du musst nur noch die entsprechenden D
 
 Die Mustertexte unterscheiden sich natürlich bei den unterschiedlichen Anfragetypen. Wir unterstützen die wichtigsten davon.
 
-<article class="list-article sample-letter-list-article">
+<article class="list-article icon-list-article">
     <div class="col25 article-featured-image"><a href="/blog/musterbrief-dsgvo-anfrage-auskunft/"><img class="image" src="/card-icons/view.svg" alt="Antrag auf Auskunft nach Art. 15 DSGVO"></a></div>
 
     <div class="padded col75">
@@ -26,7 +26,7 @@ Die Mustertexte unterscheiden sich natürlich bei den unterschiedlichen Anfraget
     <a class="button button-primary read-more-button" href="/blog/musterbrief-dsgvo-anfrage-auskunft/">Zum Musterbrief&nbsp;<span class="icon icon-arrow-right"></span></a>
 </article>
 
-<article class="list-article sample-letter-list-article">
+<article class="list-article icon-list-article">
     <div class="col25 article-featured-image"><a href="/blog/musterbrief-dsgvo-anfrage-berichtigung/"><img class="image" src="/card-icons/edit.svg" alt="Antrag auf Berichtigung nach Art. 16 DSGVO"></a></div>
 
     <div class="padded col75">
@@ -40,7 +40,7 @@ Die Mustertexte unterscheiden sich natürlich bei den unterschiedlichen Anfraget
     <a class="button button-primary read-more-button" href="/blog/musterbrief-dsgvo-anfrage-berichtigung/">Zum Musterbrief&nbsp;<span class="icon icon-arrow-right"></span></a>
 </article>
 
-<article class="list-article sample-letter-list-article">
+<article class="list-article icon-list-article">
     <div class="col25 article-featured-image"><a href="/blog/musterbrief-dsgvo-anfrage-loeschung/"><img class="image" src="/card-icons/erase.svg" alt="Antrag auf Löschung nach Art. 17 DSGVO („Recht auf Vergessenwerden“)"></a></div>
 
     <div class="padded col75">

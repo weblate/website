@@ -12,7 +12,7 @@ With them, sending a GDPR request is simple: All you need to do is enter your da
 
 There's a letter template for each request type, of course. We support the most common ones.
 
-<article class="list-article sample-letter-list-article">
+<article class="list-article icon-list-article">
     <div class="col25 article-featured-image"><a href="/blog/sample-letter-gdpr-access-request/"><img class="image" src="/card-icons/view.svg" alt="Request for access as per Art. 15 GDPR"></a></div>
 
     <div class="padded col75">
@@ -26,7 +26,7 @@ There's a letter template for each request type, of course. We support the most 
     <a class="button button-primary read-more-button" href="/blog/sample-letter-gdpr-access-request/">View sample letter&nbsp;<span class="icon icon-arrow-right"></span></a>
 </article>
 
-<article class="list-article sample-letter-list-article">
+<article class="list-article icon-list-article">
     <div class="col25 article-featured-image"><a href="/blog/sample-letter-gdpr-rectification-request/"><img class="image" src="/card-icons/edit.svg" alt="Request for rectification as per Art. 16 GDPR"></a></div>
 
     <div class="padded col75">
@@ -40,7 +40,7 @@ There's a letter template for each request type, of course. We support the most 
     <a class="button button-primary read-more-button" href="/blog/sample-letter-gdpr-rectification-request/">View sample letter&nbsp;<span class="icon icon-arrow-right"></span></a>
 </article>
 
-<article class="list-article sample-letter-list-article">
+<article class="list-article icon-list-article">
     <div class="col25 article-featured-image"><a href="/blog/sample-letter-gdpr-erasure-request/"><img class="image" src="/card-icons/erase.svg" alt="Request for erasure as per Art. 17 GDPR"></a></div>
 
     <div class="padded col75">
