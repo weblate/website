@@ -94,7 +94,7 @@ Vielen Dank, dass Du Dich über die Möglichkeiten zum Mitmachen informierst!
 
         <p>Datenanfragen.de wird immer kostenlos zur Verfügung stehen. Aber ein solches Projekt zu betreiben, kostet natürlich Geld. Und je mehr wir davon zur Verfügung haben, desto mehr Projekte zum Datenschutz können wir starten und weiterführen.
         <br>Von daher sind wir Dir sehr dankbar über jede Spende.</p>
-        <p>Hinter dem Projekt steht der <a href="https://verein.datenanfragen.de">Datenanfragen.de e. V.</a>, ein gemeinnütziger Verein. Das bedeutet, dass Du Deine Spende sogar von der Steuer absetzen kannst. Weitere Informationen dazu findest Du auf unserer Spendenseite.</p>
+        <p>Hinter dem Projekt steht der <a href="https://verein.datenanfragen.de">Datenanfragen.de e.&nbsp;V.</a>, ein gemeinnütziger Verein. Das bedeutet, dass Du Deine Spende sogar von der Steuer absetzen kannst. Weitere Informationen dazu findest Du auf unserer Spendenseite.</p>
         <p>Wenn Du den Verein langfristig unterstützen möchtest, kannst Du natürlich auch Mitglied werden. <!-- TODO: Link once that page is online. --></p>
     </div>
     <div class="clearfix"></div>
