@@ -116,7 +116,7 @@
     weight = 60
 
 [[languages.en.menu.footerright]]
-    name = "Legal notice and contact data"
+    name = "Legal notice and contact"
     url = "/contact"
     weight = 10
 [[languages.en.menu.footerright]]
