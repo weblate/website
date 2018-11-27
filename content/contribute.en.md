@@ -5,7 +5,7 @@
 
 We are a project run by a non-profit and realised by volunteers. As such, we rely on the help of people like you.
 
-There are many tasks from different topics that need to be done. Among them, many that are suitable for people who don't yet have a lot of experience with data protected. On this page, we have compiled a list of the most important ones. If there's something you want to contribute to, we would greatly appreciate your help.  
+There are many tasks from different topics that need to be done. Among them, many that are suitable for people who don't yet have a lot of experience with data protection. On this page, we have compiled a list of the most important ones. If there's something you want to contribute to, we would greatly appreciate your help.  
 Thank you so much for looking into contributing to datarequests.org!
 
 <article id="cdb" class="list-article icon-list-article">
@@ -15,8 +15,8 @@ Thank you so much for looking into contributing to datarequests.org!
         <h1>Maintaining the company database</h1>
 
         <p>The <a href="/company">company database</a> is an important element of datarequests.org. It contains the contact details for privacy-related requests to lots of companies and other organisations.</p>
-        <p>A database like that of course requires a lot of maintenance, why is why we could really use your help! If you find a company that is missing from our database, you can click the button below and submit it yourself.
-        <br>You have noticed that the data we have on a company is incorrect or incomplete? A the bottom of every company detail page, there is a link that allows you to edit the current data.</p>
+        <p>A database like that of course requires a lot of maintenance, which is why we could really use your help! If you find a company that is missing from our database, you can click the button below and submit it yourself.
+        <br>You have noticed that the data we have on a company is incorrect or incomplete? At the bottom of every company detail page, there is a link that allows you to edit the current data.</p>
         <p>If you want to dig in even further, you can also directly contribute to the <a href="https://github.com/datenanfragen/data">GitHub repository</a> we use to manage the database.</p>
     </div>
     <div class="clearfix"></div>
@@ -78,7 +78,7 @@ Thank you so much for looking into contributing to datarequests.org!
         <h1>Helping with the code</h1>
 
         <p>You want to help with the datarequests.org code? We of course also welcome any help here. There’s always a bug that needs to be solved or a new feature that wants to be implemented.</p>
-        <p>The project is designed as a static website based on Hugo and Webpack. Most of the development is done on a private GitLab instance, with all commits being mirrored to GitHub. We still welcome issues and pull requests through the GitHub repository. There’s also more details on our architecture there.</p>
+        <p>The project is designed as a static website based on Hugo and Preact. Most of the development is done on a private GitLab instance, with all commits being mirrored to GitHub. We still welcome issues and pull requests through the GitHub repository. There’s also more details on our architecture there.</p>
     </div>
     <div class="clearfix"></div>
 
@@ -94,7 +94,7 @@ Thank you so much for looking into contributing to datarequests.org!
         <p>datarequests.org will always be offered for free. But running a project like this obviously costs money. And the more money we have available, the more projects relating to data protection we can start and continue.
         <br>As such, we are incredibly grateful for all donations.</p>
         <p>The project is run by <a href="https://verein.datenanfragen.de/en">Datenanfragen.de e.&nbsp;V.</a>, a public-benefit non-profit from Germany. That means that donations donations from individuals and companies from Germany are eligible for tax deduction. There’s more details on that on the donation page.</p>
-        <p>If you want to support us longterm, you can also become a member. <!-- TODO: Link once that page is online. --></p>
+        <p>If you want to support us long-term, you can also become a member. <!-- TODO: Link once that page is online. --></p>
     </div>
     <div class="clearfix"></div>
 

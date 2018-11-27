@@ -78,8 +78,8 @@ Vielen Dank, dass Du Dich über die Möglichkeiten zum Mitmachen informierst!
     <div class="padded col75">
         <h1>Mitarbeit am Code</h1>
 
-        <p>Du hast Lust uns bei der Programmierung von Datenanfragen.de zu helfen? Auch ist ist Deine Mitarbeit natürlich gerne gesehen. Es gibt immer einen Bug, der behoben werden muss oder eine neue Funktion, die implementiert werden will.</p>
-        <p>Das Projekt ist als statische Webseite entworfen und basiert auf Hugo und Webpack. Die meiste Entwicklungsarbeit findet zur Zeit über eine private GitLab-Instanz statt, von der aus alle Commits zu GitHub gespiegelt werden. Trotzdem nehmen wir natürlich gerne Issues und Pull Requests über das GitHub-Repository an. Dort findest Du auch weitere Details zu unserer Architektur.</p>
+        <p>Du hast Lust uns bei der Programmierung von Datenanfragen.de zu helfen? Auch hier ist Deine Mitarbeit natürlich gerne gesehen. Es gibt immer einen Bug, der behoben werden muss oder eine neue Funktion, die implementiert werden will.</p>
+        <p>Das Projekt ist als statische Webseite entworfen und basiert auf Hugo und Preact. Die meiste Entwicklungsarbeit findet zur Zeit über eine private GitLab-Instanz statt, von der aus alle Commits zu GitHub gespiegelt werden. Trotzdem nehmen wir natürlich gerne Issues und Pull Requests über das GitHub-Repository an. Dort findest Du auch weitere Details zu unserer Architektur.</p>
     </div>
     <div class="clearfix"></div>
 
