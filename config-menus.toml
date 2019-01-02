@@ -35,10 +35,10 @@
     name = "Mitmachen"
     url = "/contribute"
     weight = 30
-# [[languages.de.menu.footercenter]]
-#     name = "Spenden"
-#     url = "https://verein.datenanfragen.de/spenden"
-#     weight = 40
+[[languages.de.menu.footercenter]]
+    name = "Spenden"
+    url = "https://verein.datenanfragen.de/spenden"
+    weight = 40
     post = "<br>"
 [[languages.de.menu.footercenter]]
     name = "Deine DSGVO-Rechte"
@@ -101,10 +101,10 @@
     name = "Contribute"
     url = "/contribute"
     weight = 30
-# [[languages.en.menu.footercenter]]
-#     name = "Donate"
-#     url = "https://verein.datenanfragen.de/spenden"
-#     weight = 40
+[[languages.en.menu.footercenter]]
+    name = "Donate"
+    url = "https://verein.datenanfragen.de/en/donate"
+    weight = 40
     post = "<br>"
 [[languages.en.menu.footercenter]]
     name = "Your GDPR rights"
