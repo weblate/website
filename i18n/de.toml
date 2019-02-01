@@ -283,6 +283,9 @@ other = "Weiterlesen…"
 [blog-tags-list]
 other = "Artikel zum Tag: "
 
+[blog-written-by]
+other = "geschrieben von"
+
 [noscript-generator]
 other = "Der Generator läuft vollständig auf Deinem Computer und verwendet deshalb ausschließlich JavaScript. Der Code wird keine Daten an andere Server weiterleiten, wenn Du das nicht möchstest. Wenn Du den Generator benutzen möchtest musst du JavaScript im Browser aktivieren oder eine Ausnahme in Deine Blocker hinzufügen. Sollte es dann immer noch nicht funktionieren, schreib uns eine E-Mail an <a href=\"mailto:dev@datenanfragen.de\">dev@datenanfragen.de</a>."
 
