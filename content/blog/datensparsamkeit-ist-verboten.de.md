@@ -6,7 +6,8 @@
     "description": "Eine Meinung zu dem Beschluss des Bundesverfassungsgerichts, dass Posteo zur Überwachung von IP-Adressen verpflichtet ist.",
     "tags": [ "BVerfG", "TKÜV", "Posteo", "Telekommunikationsüberwachung", "Datensparsamkeit" ],
     "featured_image": "/img/blog/posteo_logo.jpg",
-    "byline": "Lorenz Sieben (Vorsitzender des Datenanfragen.de e. V.)"
+    "byline": "**Lorenz Sieben** (Vorsitzender des Datenanfragen.de e. V.)",
+    "short_author": "Lorenz"
 }
 
 Mit dem seit [drei Tagen öffentlichen Beschluss](1) weißt das Bundesverfassungsgericht eine Klage des E-Mail Anbieters Posteo zurück, der gegen die Verpflichtung wehrte, IP-Adressen an die Strafverfolgungsbehörden weiterzugeben, weil er diese nicht protokolliere. Posteo ist von dieser Entscheidung ["sehr überrascht"](2), so wie auch wir die Entscheidung mit einigem Erschrecken aufgenommen haben.

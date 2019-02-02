@@ -6,9 +6,12 @@
         </div>
 
         {{ if and (eq .Type "blog") }}
-            {{ with .Params.byline }}
+            {{ if isset .Params "byline" }}
             <header id="page-meta">
-                <address class="author">{{ T "blog-written-by" }} {{ . }}</address>
+                <address class="author">
+                    {{ T "blog-written-by" }} {{ .Params.byline | markdownify }}{{ with .Params.date }}<br>{{ T "blog-written-on" }} <time pubdate datetime="{{ .Format "2006-01-02T15:04" }}">{{ .Format "2006-01-02" }} {{ T "blog-time-at" }} {{ .Format "15:04" }}</time>{{- end -}}
+                    {{ with .Params.last_edited }}{{T "blog-last-edited" }} <time datetime="{{ dateFormat "2006-01-02T15:04" . }}">{{ dateFormat "2006-01-02" . }} {{ T "blog-time-at" }} {{ dateFormat "15:04" . }}</time>{{ end }}
+                </address>
             </header>
             {{ end }}
             {{ if (not .Params.disable_comments) }}
